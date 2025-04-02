@@ -1,0 +1,4 @@
+flask==3.0.2
+spacy==3.7.4
+faker==24.1.0
+flask-cors==4.0.0 

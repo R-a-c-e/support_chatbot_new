@@ -1,0 +1,26 @@
+# Application properties
+application.properties
+application-*.properties
+
+# Environment files
+.env
+.env.*
+*.env
+*.env.*
+
+# Common IDE and system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Dependencies
+node_modules/
+dist/
+build/
+target/ 
