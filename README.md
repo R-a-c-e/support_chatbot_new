@@ -2,6 +2,37 @@
 
 A secure chatbot application with anonymization capabilities, built with Spring Boot, Flask, and React.
 
+## Configuration Files Setup
+
+Before running the application, you need to set up two configuration files:
+
+1. Backend Configuration (`src/main/resources/application.properties`):
+
+   - Copy `src/main/resources/application.properties.template` to `src/main/resources/application.properties`
+   - Update the following values:
+     ```properties
+     openai.api.key=your_openai_api_key_here
+     openai.api.assistant.id=your_assistant_id_here
+     ```
+
+2. Frontend Configuration (`chat-frontend/.env`):
+   - Copy `chat-frontend/.env.template` to `chat-frontend/.env`
+   - Update the following values:
+     ```env
+     VITE_API_URL=http://localhost:8081
+     VITE_OPENAI_API_KEY=your_openai_api_key_here
+     ```
+3. Flask Configuration
+   - Creat this directory at the highest level and just name it .env
+   - it should contain the following
+     ```
+     FLASK_APP=anonymization_api.py
+     FLASK_ENV=development
+     FLASK_PORT=5001
+     ```
+
+⚠️ Important: Never commit these files to version control. They are already added to .gitignore for security.
+
 ## Prerequisites
 
 - Java 17 or higher
@@ -61,7 +92,7 @@ The Spring backend will start on port 8081.
 Navigate to the frontend directory:
 
 ```bash
-cd frontend
+cd chat-frontend
 ```
 
 Install dependencies:
